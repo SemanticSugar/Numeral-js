@@ -41,7 +41,7 @@ exports.unformat = {
 
         var tests = [
                 ['($1.23m)', -1230000],
-                ['$ 10,000.00', 10000]
+                ['$\xa010,000.00', 10000]
             ];
 
         for (var i = 0; i < tests.length; i++) {
@@ -56,7 +56,7 @@ exports.unformat = {
 
         var tests = [
                 ['100B', 100],
-                ['3.154 TB', 3467859674006]
+                ['3.154\xa0TB', 3467859674006]
             ];
 
         for (var i = 0; i < tests.length; i++) {

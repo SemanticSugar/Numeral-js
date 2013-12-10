@@ -19,6 +19,7 @@
         currentLanguage = 'en',
         zeroFormat = null,
         defaultFormat = '0,0',
+        NBSP = '\xa0',
         // check for nodeJS
         hasModule = (typeof module !== 'undefined' && module.exports);
 
@@ -132,10 +133,10 @@
 
         // check for space before or after currency
         if (format.indexOf(' $') > -1) {
-            space = ' ';
+            space = NBSP;
             format = format.replace(' $', '');
         } else if (format.indexOf('$ ') > -1) {
-            space = ' ';
+            space = NBSP;
             format = format.replace('$ ', '');
         } else {
             format = format.replace('$', '');
@@ -173,7 +174,7 @@
 
         // check for space before %
         if (format.indexOf(' %') > -1) {
-            space = ' ';
+            space = NBSP;
             format = format.replace(' %', '');
         } else {
             format = format.replace('%', '');
@@ -255,7 +256,7 @@
             if (format.indexOf('a') > -1) {
                 // check for space before abbreviation
                 if (format.indexOf(' a') > -1) {
-                    abbr = ' ';
+                    abbr = NBSP;
                     format = format.replace(' a', '');
                 } else {
                     format = format.replace('a', '');
@@ -284,7 +285,7 @@
             if (format.indexOf('b') > -1) {
                 // check for space before
                 if (format.indexOf(' b') > -1) {
-                    bytes = ' ';
+                    bytes = NBSP;
                     format = format.replace(' b', '');
                 } else {
                     format = format.replace('b', '');
@@ -308,7 +309,7 @@
             if (format.indexOf('o') > -1) {
                 // check for space before
                 if (format.indexOf(' o') > -1) {
-                    ord = ' ';
+                    ord = NBSP;
                     format = format.replace(' o', '');
                 } else {
                     format = format.replace('o', '');

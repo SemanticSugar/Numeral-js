@@ -6,21 +6,21 @@
 (function () {
     var language = {
         delimiters: {
-            thousands: ' ',
+            thousands: '\xa0',
             decimal  : ','
         },
         abbreviations: {
             thousand : 'k',
-            million  : ' mln',
-            billion  : ' mld',
-            trillion : ' bln'
+            million  : '\xa0mln',
+            billion  : '\xa0mld',
+            trillion : '\xa0bln'
         },
         ordinal : function (number) {
             var remainder = number % 100;
             return (number !== 0 && remainder <= 1 || remainder === 8 || remainder >= 20) ? 'ste' : 'de';
         },
         currency: {
-            symbol: '€ '
+            symbol: '€\xa0'
         }
     };
 

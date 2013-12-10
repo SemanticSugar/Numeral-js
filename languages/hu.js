@@ -6,7 +6,7 @@
 (function () {
     var language = {
         delimiters: {
-            thousands: ' ',
+            thousands: '\xa0',
             decimal: ','
         },
         abbreviations: {
@@ -19,7 +19,7 @@
             return '.';
         },
         currency: {
-            symbol: ' Ft'
+            symbol: '\xa0Ft'
         }
     };
 
